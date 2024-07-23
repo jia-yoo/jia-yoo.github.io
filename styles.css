@@ -8,7 +8,6 @@ body {
   box-sizing: border-box;
 }
 
-
 .hamburger-menu {
   position: fixed;
   top: 20px;
@@ -58,6 +57,14 @@ body {
 .sidebar nav ul li a:hover {
   color: #f1f1f1;
 }
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 
 #intro {
   background: #f4f4f4;
@@ -68,30 +75,51 @@ body {
   text-align: center;
   padding: 0 50px;
   position: relative;
+  width: 100%;
 }
 
 .code-container {
   word-wrap: break-word; /* Handle long words */
   overflow: hidden;
   font-size: 1em;
-  background: #f5f5f5;
+  background: #f4f4f4;
   width: 70%;
   margin: 0 auto;
   font-family: "Noto Sans KR", sans-serif;
   text-align: left;
   position: relative;
+  animation: fadeIn 2s;
 }
 
-.typing {
-  display: inline; /* Ensures the content is hidden until it is typed */
-  border-right: 3px solid; /* The cursor */
+.typing-output {
+  margin-top: 20px;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 1.2em;
+  color: #010101;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  position: relative;
+  animation: fadeIn 2s;
+}
+
+.cursor {
+  display: inline-block;
+  width: 3px;
+  height: 1em;
+  background: black;
   animation: blink-caret 0.75s step-end infinite;
-  white-space: pre-wrap; /* Allow wrapping */
+  vertical-align: bottom; /* Align the cursor with the text */
+  line-height: inherit; /* Inherit the line height from the parent */
 }
 
 @keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: black; }
+  from,
+  to {
+    background: transparent;
+  }
+  50% {
+    background: black;
+  }
 }
 
 .intro-content {
@@ -103,7 +131,7 @@ body {
   animation: fadeIn 2s ease-in-out;
   margin: 0 auto;
 }
-.introduction{
+.introduction {
   margin-top: 30px;
 }
 
@@ -129,12 +157,13 @@ body {
   animation: slideIn 2s ease-in-out;
 }
 
-h1{
+h1 {
   font-family: "Do Hyeon", sans-serif;
   font-size: 60px;
   margin: 0;
 }
-.sub_title{
+
+.sub_title {
   font-size: 30px;
   font-family: "Do Hyeon", sans-serif;
 }
@@ -163,8 +192,6 @@ h1{
 .github_white_icon:hover {
   content: url("/images/free-icon-github-733609.png");
 }
-
-
 
 @keyframes fadeIn {
   0% {
@@ -197,35 +224,38 @@ h1{
   /* width: 110vh; */
   margin: 0 auto;
 }
+#skills {
+  width: 180vh;
+}
 
-#skills ul{
+#skills ul {
   margin: 8px;
 }
 
-h2{
-  color:#a890d6;
+h2 {
+  color: #a890d6;
   font-weight: bolder;
   font-size: 80px;
   font-family: "Do Hyeon", sans-serif;
-  margin:0;
+  margin: 0;
 }
 
-h3{
-  margin:0;
+h3 {
+  margin: 0;
   padding-bottom: 10px;
   border-bottom: 1px solid lightgrey;
   margin-bottom: 10px;
 }
 
-h4{
-  margin:0;
+h4 {
+  margin: 0;
 }
 
-.skill_item{
+.skill_item {
   width: 800px;
 }
 
-.skill_section{
+.skill_section {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -233,7 +263,7 @@ h4{
 
 #about,
 #project,
-#skills{
+#skills {
   padding: 4em 2em;
   opacity: 0;
   transform: translateY(50px);
@@ -242,7 +272,7 @@ h4{
 
 #about.show,
 #project.show,
-#skills.show{
+#skills.show {
   opacity: 1;
   transform: translateY(0);
 }
@@ -251,7 +281,7 @@ h4{
   visibility: hidden;
 }
 
-.project_container{
+.project_container {
   display: flex;
   flex-direction: row;
 }
@@ -266,7 +296,7 @@ h4{
   transform: translateY(50px);
   transition: opacity 1s, transform 1s;
 }
-.project_img{
+.project_img {
   width: 100%;
   display: none; /* 처음엔 모든 이미지를 숨김 */
 }
@@ -274,38 +304,36 @@ h4{
   display: block; /* active 클래스가 있는 이미지만 보임 */
 }
 
-
-.project_info{
+.project_info {
   margin-top: 20px;
   position: relative;
 }
 
-.project_title{
+.project_title {
   font-weight: bold;
   font-size: 20px;
-  margin:10px;
+  margin: 10px;
 }
 
-.desc{
-  margin-top:10px;
+.desc {
+  margin-top: 10px;
 }
 
-.skill_container{
-  margin-top:30px;
+.skill_container {
+  margin-top: 30px;
   display: flex;
   flex-wrap: wrap;
 }
 
-
-.skills{
+.skills {
   border: 1px solid #a890d6;
   border-radius: 50px;
   color: #f4f4f4;
   background-color: #a890d6;
-  padding:5px;
+  padding: 5px;
   font-size: smaller;
   margin-bottom: 5px;
-  margin-right:5px;
+  margin-right: 5px;
 }
 
 .hover-info {
@@ -324,26 +352,25 @@ h4{
   display: flex;
 }
 
-.project_item:hover .hover-info .img_container{
+.project_item:hover .hover-info .img_container {
   display: block;
   position: absolute;
-  left:50%;
-  top:50%;
+  left: 50%;
+  top: 50%;
   margin-top: -35px;
   margin-left: -110px;
 }
 
-.img_container img{
+.img_container img {
   width: 50px;
-  height:50px;
+  height: 50px;
   margin: 0 20px;
 }
-footer{
+footer {
   text-align: center;
-  padding:50px;
+  padding: 50px;
   background-color: #f1f1f1;
 }
-
 
 @media (max-width: 768px) {
   .intro-content {
@@ -358,6 +385,3 @@ footer{
     flex-direction: column;
   }
 }
-
-
-
