@@ -1,27 +1,62 @@
+const hamburgerMenu = document.getElementById("hamburger-menu");
+const sidebar = document.getElementById("sidebar");
+const aboutSection = document.querySelector("#about");
+const skillsSection = document.querySelector("#skills");
+const projectSection = document.querySelector("#project");
+const projectItems = document.querySelectorAll(".project_item");
+const projectInfoItems = document.querySelectorAll(".project_info");
+const icons = document.querySelectorAll(".contact_icon");
+
+
 document.addEventListener("DOMContentLoaded", function () {
+  const codeBlock = document.getElementById("code-block");
+  const typingContainer = document.getElementById("main-typing");
+
+  hljs.highlightElement(codeBlock);
+  hljs.highlightElement(typingContainer);
+
+
+//const code = `안녕하세요. 유지아입니다. 코딩할 때는 Java, 대화할 때는 영어, 둘 다 제가 좋아하는 언어입니다! 
+//문제를 파악해 해결책을 코드로 구현할 수 있으며, 오류를 분석해 문제를 수정할 수 있습니다.`;
+/*
+
+const typingContainer = document.querySelector(".typing");
+
+let index = 0;
+
+
+function typeCode() {
+    if (index < code.length) {
+      typingContainer.innerHTML += code[index] === "\n" ? "<br>" : code[index];
+      index++;
+      setTimeout(typeCode, 50);
+    }
+}
+typeCode();
+*/
 
 const code = `
-       
+public static void main(String[] args) {
+  JuniorDeveloper developer = new JuniorDeveloper("유지아", "Java", true);
+  developer.introduce();
+  developer.writeCode();
+  developer.debugCode();
+}`;
 
- `;
 
-const codeBlock = document.getElementById("code-block");
+
 
 let index = 0;
 
 function typeCode() {
     if (index < code.length) {
-      codeBlock.innerHTML += code[index] === "\n" ? "<br>" : code[index];
-      index++;
-      setTimeout(typeCode, 50);
-    } else {
-      hljs.highlightElement(codeBlock);
+        typingContainer.innerHTML += code[index] === "\n" ? "<br>" : code[index];
+        index++;
+        setTimeout(typeCode, 10);
     }
 }
 
 typeCode();
-
-const icons = document.querySelectorAll(".contact_icon");
 
 
   icons.forEach((icon) => {
@@ -33,15 +68,29 @@ const icons = document.querySelectorAll(".contact_icon");
         location.href = "mailto:jiayoo.dev@gmail.com";
       } else if (event.target.classList.contains("github_icon")) {
         window.open("https://github.com/jia-yoo", "_blank");
+      }else if(event.target.classList.contains("file_icon")){
+        if(event.target.parentElement.classList.contains("pet_care")){
+          window.open("https://drive.google.com/file/d/1ixqWIfH7KiMiFBZBcNiLYxbLyq5TwWws/view?usp=sharing", "_blank");
+        }else if(event.target.parentElement.classList.contains("onepick")){
+          window.open("https://drive.google.com/file/d/1ixqWIfH7KiMiFBZBcNiLYxbLyq5TwWws/view?usp=sharing", "_blank");
+        }else{
+          window.open("https://drive.google.com/file/d/1YR3kzhQhFRYBmuJDJtUCvjaKVgdNzycw/view?usp=sharing", "_blank");
+        }
+
+      }else if(event.target.classList.contains("github_white_icon")){
+        if(event.target.parentElement.classList.contains("pet_care")){
+          window.open("https://github.com/jia-yoo/Animal_Hospital_Reservation", "_blank");
+        }else if(event.target.parentElement.classList.contains("onepick")){
+          window.open("https://github.com/jia-yoo/onepick", "_blank");
+        }else{
+          window.open("https://github.com/jia-yoo/Jobking", "_blank");
+        }
       }
     });
   });
 
-  const hamburgerMenu = document.getElementById("hamburger-menu");
-  const sidebar = document.getElementById("sidebar");
-  const aboutSection = document.querySelector("#about");
-  const projectSection = document.querySelector("#project");
-  const projectItems = document.querySelectorAll(".project_item");
+
+
 
   hamburgerMenu.addEventListener("click", function () {
     if (sidebar.style.width === "250px") {
@@ -70,25 +119,56 @@ const icons = document.querySelectorAll(".contact_icon");
 
   window.addEventListener("scroll", function () {
     const aboutSectionPos = aboutSection.getBoundingClientRect().top;
+    const skillsSectionPos = skillsSection.getBoundingClientRect().top;
+    const projectItemPos = projectSection.getBoundingClientRect().top;
     const screenPos = window.innerHeight / 1.3;
 
     if (aboutSectionPos < screenPos) {
       aboutSection.classList.add("show");
       aboutSection.classList.remove("hidden");
-      projectSection.classList.add("show");
-      projectSection.classList.remove("hidden");
+    }else{
+      aboutSection.classList.add("hidden");
+      aboutSection.classList.remove("show");
+    }
+    if (skillsSectionPos < screenPos) {
+      skillsSection.classList.add("show");
+      skillsSection.classList.remove("hidden");
+    }else{
+      skillsSection.classList.add("hidden");
+      skillsSection.classList.remove("show");
     }
 
-    projectItems.forEach((projectItem) => {
-      const projectItemPos = projectItem.getBoundingClientRect().top;
-
-      if (projectItemPos < screenPos) {
-        projectItem.classList.add("show");
-        projectItem.classList.remove("hidden");
-      } else {
-        projectItem.classList.remove("show");
-        projectItem.classList.add("hidden");
-      }
-    });
+    if (projectItemPos < screenPos) {
+      projectSection.classList.add("show");
+      projectSection.classList.remove("hidden");
+    }else{
+      projectSection.classList.add("hidden");
+      projectSection.classList.remove("show");
+    }
+ 
   });
+});
+
+
+projectItems.forEach((projectItem) => {
+  const images = projectItem.querySelectorAll('img');
+  if (images.length > 0) {
+      images[0].classList.add('active'); // 첫 번째 이미지를 기본 활성화
+  }
+
+  projectItem.addEventListener('mouseover', function() {
+      if (images.length > 1) {
+          images[0].classList.remove('active');
+          images[1].classList.add('active');
+      }
+  });
+
+  projectItem.addEventListener('mouseout', function() {
+      if (images.length > 1) {
+          images[1].classList.remove('active');
+          images[0].classList.add('active');
+      }
+  });
+
+
 });

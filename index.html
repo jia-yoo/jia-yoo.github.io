@@ -9,41 +9,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
- <style>
-        .code-container {
-            white-space: pre-wrap; /* Allow wrapping */
-            word-wrap: break-word; /* Handle long words */
-            overflow: hidden;
-            border: 1px solid #ddd;
-            font-size: 1em;
-            background: #f5f5f5;
-            width: 70%;
-            margin: 0 auto;
-            font-family: "Noto Sans KR", sans-serif;
-            text-align: left;
-        }
-        .class-container{
-          display: flex;
-          flex-direction: row;
-        }
-
-        @keyframes typing {
-            from { width: 0 }
-            to { width: 100% }
-        }
-
-        .typing {
-            overflow: hidden; /* Ensures the content is hidden until it is typed */
-            white-space: nowrap; /* Keeps the content on a single line */
-            border-right: 3px solid; /* The cursor */
-            animation: typing 4s steps(50, end), blink-caret 0.75s step-end infinite;
-        }
-
-        @keyframes blink-caret {
-            from, to { border-color: transparent }
-            50% { border-color: black; }
-        }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
 
   </head>
   <body>
@@ -57,13 +29,13 @@
         <ul>
           <li><a href="#intro">Home</a></li>
           <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
           <li><a href="#project">Projects</a></li>
         </ul>
       </nav>
     </div>
     <section id="intro">
       <div class="code-container">
-        <div class="class-container">
           <pre><code class="java" id="code-block">
             static class JuniorDeveloper extends BaseDeveloper implements Developer {
               String favoriteLanguage;
@@ -78,20 +50,12 @@
 
               @Override
               void introduce() {
-                System.out.println("")
+                System.out.println("안녕하세요. " + name + "입니다.");
+                System.out.println("코딩할 때는"+ favoriteLanguage +", 대화할 때는 영어, 둘 다 제가 좋아하는 언어입니다!");
                 }
               }
-     
-            public static void main(String[] args) {
-              JuniorDeveloper developer = new JuniorDeveloper("유지아", "Java", true, true);
-                  developer.introduce();
-                  developer.writeCode();
-                  developer.debugCode();
-            }
-          }
           </code></pre>
-      </div>
-        <code class="language-java typing"></code>
+          <pre><code class="java typing" id="main-typing"></code></pre>
     </div>
   
     </section>
@@ -108,8 +72,8 @@
             </div>
             <div class="intro-text">
               <h1>유지아</h1>
-              <p>성실함을 바탕으로 꾸준히 성장하는 개발자</p>
-            </div>
+              <p class="sub_title">성실함을 바탕으로 꾸준히 성장하는 개발자</p>
+            
             <div class="contact_container">
               <img
                 src="/images/free-icon-cv-7198116.png"
@@ -125,14 +89,15 @@
                 class="contact_icon github_icon" />
             </div>
           </div>
-          <p>
-            6년 간의 호주 생활을 통해, 다양한 문화권의 사람들과 협업하며 비즈니스 영어 능력을 포함한 효율적인 의사소통 능력을 갖추게 되었습니다. </br>
-            맡은 업무를 책임감 있게 성실히 수행하는 모습을 인정받아, 로컬 중심의 회사에서 첫 외국인 Supervisor로 승진하며 팀을 이끌 수 있는 기회도 얻을 수 있었습니다.</br>
+          </div>
+          <div class="introduction">
+            6년 간의 호주 생활을 통해, 다양한 문화권의 사람들과 협업하며 <strong>비즈니스 영어 능력을 포함한 효율적인 의사소통 능력</strong>을 갖추게 되었습니다. </br>
+            맡은 업무를 책임감 있게 성실히 수행하는 모습을 인정받아, 로컬 중심의 회사에서 <strong>첫 외국인 Supervisor로 승진</strong>하며 팀을 이끌 수 있는 기회도 얻을 수 있었습니다.</br>
           </br>
-            세 번의 팀 프로젝트를 통해 협업 능력과 기술적 문제 해결 역량을 크게 발전시켰습니다. 첫 번째 프로젝트에서는 일정 지연에도 불구하고 더 많은 부분을 담당해 완수했고,
-            두 번째, 세 번째 프로젝트에서는 기술 지원 역할을 맡아 팀원들의 문제를 함께 해결하고, 나아가 새로운 기술을 빠르게 학습하고 구현하여 일정보다 앞서 업무를 완료한 경험이 있습니다.
+            세 번의 팀 프로젝트를 통해 협업 능력과 기술적 문제 해결 역량을 크게 발전시켰습니다. 첫 번째 프로젝트에서는 일정 지연에도 불구하고 더 많은 부분을 담당해 완수했고, </br>
+            두 번째, 세 번째 프로젝트에서는 <strong>기술 지원 역할을 맡아 팀원들의 문제를 함께 해결</strong>하고, 나아가 <strong>새로운 기술을 빠르게 학습하고 구현하여 일정보다 앞서 업무를 완료</strong>한 경험이 있습니다.</br>
             이러한 경험을 통해 배운 성실함과 능동적인 태도로 회사의 발전에 기여하고, 꾸준히 성장하는 개발자가 되겠습니다. </br>
-          </p>
+          </div>
         </div>
       </div>
               </div>
@@ -140,78 +105,181 @@
             <div class="project_detail">
               <ul>
     </section>
-    <section id="project" class="hidden">
+    <section id="skills" class="hidden">
       <div class="container">
         <div class="text-content">
-          <h2>Project</h2>
-          <div class="project_item hidden" id="pet_care_platform">
+          <h2>Skills</h2>
+          <div class="skill_section">
+          <div class="skill_item">
+            <h3>언어 및 프레임 워크</h3>
+            <div class="java">
+              <h4>JAVA</h4>
+              <ul>
+                <li>객체지향 프로그래밍(OOP) 개념에 대해 이해하고 있으며, 상속과 제네릭을 사용한 무한배열 라이브러리 구현한 경험이 있습니다.</li>
+                <li>회원가입 및 로그인 기능에서 발생하는 다양한 예외 상황을 <strong>별도의 예외 처리 클래스를 구성</strong>하여 관리했습니다.</li>
+                <li>예약 프로그램에서 <strong>멀티스레딩을 사용하여 동시 예약으로 인한 데이터 충돌을 방지</strong>한 경험이 있습니다. </li>
+              </ul>
+            </div>
+            <div class="spring_boot">
+              <h4>Spring Boot</h4>
+              <ul>
+                <li>예약 관리 프로그램 내 <strong>시간 단위 변환 작업을 분리하여 AOP를 직접 구현</strong>한 경험이 있습니다.</li>
+                <li>RESTful 설계 원칙을 따르고, HTTP 메서드와 상태 코드를 사용해 클라이언트와 서버 간 통신을 관리할 수 있습니다.</li>
+                <li>Spring Security와 JWT를 적용해 권한이 없는 사용자의 요청을 처리한 경험이 있습니다.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="skill_item">
+            <h3>데이터 베이스</h3>
+            <div class="MariaDB">
+              <h4>MariaDB</h4>
+              <ul>
+                <li>CRUD 쿼리 작성, JOIN, TRIGGER, PROCEDURE 사용할 수 있습니다.</li>
+                <li>데이터베이스의 성능과 무결성을 위해 <strong>필요에 따라 테이블을 정규화 또는 비정규화</strong>할 수 있습니다.</li>
+              </ul>
+            </div>
+            <div class="myBatis">
+              <h4>MyBatis</h4>
+              <ul>
+                <li>  &lt;if &gt;,  &lt;foreach &gt; 등의 태그를 사용하여 동적 SQL을 구성할 수 있습니다.</li>
+              </ul>
+            </div>
+            <div class="jpa">
+              <h4>JPA</h4>
+              <ul>
+                <li>어노테이션을 사용해 객체와 테이블을 매핑하고, 객체 간 관계를 정의할 수 있습니다.</li>
+                <li>JPQL을 활용해 <strong>객체 지향 쿼리를 작성</strong>할 수 있습니다.</li>
+              </ul>
+            </div>
+          </div>
+     
+        
+          </div>
+          <div class="skill_section">
+            <div class="skill_item">
+              <h3>웹 기술</h3>
+              <div class="jsp&servlet">
+                <h4>JSP & Servlet</h4>
+                <ul>
+                  <li>MVC 패턴으로 회원전용 게시판을 구현한 경험이 있습니다.</li>
+                  <li>어플리케이션, 페이지, 세션 컨텍스트와 쿠키의 개념을 이해하고, 상황에 맞게 데이터를 관리할 수 있습니다.</li>
+                </ul>
+              </div>
+              <div class="Thymeleaf">
+                <h4>Thymeleaf</h4>
+                <ul>
+                  <li>HTML을 동적으로 생성할 수 있습니다.</li>
+                </ul>
+              </div>
+              <div class="html/css">
+                <h4>HTML/CSS</h4>
+                <ul>
+                  <li>Flex, grid를 활용한 레이아웃을 구성할 수 있으며, 미디어 쿼리를 사용해 반응형 웹 디자인을 적용한 경험이 있습니다.</li>
+                 </ul>
+              </div>
+              <div class="javascript">
+                <h4>JavaScript</h4>
+                <ul>
+                  <li>ES6의 문법을 이해하고 사용할 수 있으며, 동적으로 DOM 요소를 생성하고, 다양한 이벤트를 처리할 수 있습니다.</li>
+                  <li>Promises와 async/await를 사용해 비동기 작업을 효율적으로 관리할 수 있습니다.</li>
+                  <li>Ajax와 Fetch API를 활용해 서버와 비동기적으로 데이터를 주고받을 수 있습니다.</li>
+                </ul>
+              </div>
+            </div>
+       
+          
+          <div class="skill_item">
+            <h3>협업 도구</h3>
+            <div class="github">
+              <h4>github</h4>
+              <ul>
+                <li>팀프로젝트를 하면서 여러 명이서 작업할 수 있는 환경을 구축할 수 있으며, 병합 충돌을 해결해본 적이 있습니다.</li>
+                 </ul>
+            </div>
+            <div class="notion">
+              <h4>Notion</h4>
+              <ul>
+                <li>팀 프로젝트의 요구사항 명세서, 업무일지, 일정표 등 다양한 문서를 저장 및 공유하여 작업 상태를 관리했습니다.</li>
+               </ul>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+    <section id="project" class="hidden">
+      <div class="container">
+        <h2>Project</h2>
+        <div class="project_container">
+          
+          <div class="project_item" id="pet_care_platform">
             <div class="project_title">견강할고양(반려동물 병원예약플랫폼)</div>
+           
+            <img src="/images/loading.gif" class="project_img active"/>
+            <img src="/images/견강할고양.png" class="project_img" />
             <div class="project_info">
-              <span>개발 인원 : 팀프로젝트 (5명)</span>
-              <span>개발 기간 : 24.07.02 - 24.07.17</span>
+              <span>개발 인원 : 팀프로젝트 (5명) || 개발 기간 : 24.07.02 - 24.07.17 </span>
+             
+              <div class="desc">
+                "견강할고양"은 반려동물 병원 예약 플랫폼으로, 반려동물 주인들이 손쉽게 병원을 찾고 예약할 수 
+                있도록 돕기 위해 개발된 애플리케이션입니다. 이 플랫폼은 예약관리 뿐만 아니라 
+                지도로 병원 찾기, 문의 채팅, 미니게임 등 반려인과 동물병원 모두에게 편리하고 유익한 서비스를 제공합니다.
+                "견강할고양"은 행정안전부에서 제공하는 공공 데이터 API를 활용하여 <strong>전국에 실제로 존재하는 
+                5000+개 동물 병원 데이터를 사용</strong>하여 사용자에게 최신의 정확하고 신뢰성있는 데이터를 제공합니다.
+              </div>
+              <div class="hover-info">
+                <div class="img_container pet_care">
+                  <img
+                  src="/images/free-icon-file-1150592-white.png"
+                  alt="상세보기"
+                  class="contact_icon file_icon"
+                  />
+                  <img
+                  src="/images/free-icon-github-733609-white.png"
+                  alt="github"
+                  class="contact_icon github_white_icon"
+                  />
+                </div>
+              </div>
               <div class="skill_container">
                 <span class="skills">Spring Boot</span>
                 <span class="skills">MariaDB</span>
                 <span class="skills">JPA </span>
                 <span class="skills">Spring Security</span>
                 <span class="skills">JWT</span>
-                <span class="skills">JavaScript</sp
-                <div class="sub_title">지도 기반 병원 위치 제공</div>
-                <li>
-                  네이버 지도 API를 활용하여 병원 위치를 지도에 마커로 시각화
-                </li>
-                <li>
-                  Geolocation 기능을 통해 사용자 현재 위치를 기준으로 주변
-                  병원을 검색 기능 구현
-                </li>
-                <li>
-                  전국 5000+개 동물 병원 데이터 좌표를 이용해 Reverse
-                  Geocoding API로 병원 위치 및 기본 정보 조회 기능 구현
-                </li>
-              </ul>
-              <ul>
-                <div class="sub_title">병원 예약 시스템 구현</div>
-                <li>
-                  병원별, 날짜별, 각 병원 의사별 스케줄을 기반으로 실시간 예약 가능한 타임슬롯을 제공하는 기능 구현
-                </li>
-                <li>
-                  동시 예약으로 인한 충돌을 방지하기 위해 멀티스레딩을 사용하여 동시성 관리
-                </li>
-                <li>
-                  복잡한 날짜 및 시간 변환 로직을 처리하여 정확한 예약 가능 시간대 구현
-                </li>
-              </ul>
-              <ul>
-                <div class="sub_title">고급 검색 및 필터링 기능</div>
-                <li>병원의 이름이나 주소를 기준으로 키워드가 포함된 결과를 실시간으로 필터링하여 동적으로 표시하는 비동기 검색 기능 구현</li>
-                <li>
-                  사용자가 원하는 지역(시/구)을 다중 선택할 수 있는 필터링 기능을 추가하여 보다 정교한 검색을 지원
-                </li>
-                <li>
-                  예약 가능 병원 및 포인트 사용 가능 병원 등의 기준으로 데이터를 정렬하여 사용자 맞춤형 정보를 제공
-                </li>
-              </ul>
-              <ul>
-                <div class="sub_title">기술적 구현</div>
-                <li>
-                  공통으로 적용되는 로직을 클래스화 하여 AOP(Aspect-Oriented Programming)를 직접 구현
-                </li>
-                <li>
-                  JUnit을 사용한 단위 테스트로 코드의 안정성과 신뢰성 확보
-                </li>
-                <li>
-                  미디어쿼리를 반응형 웹 디자인 구현으로 다양한 디바이스에서
-                  최적의 사용자 경험 제공
-                </li>
-              </ul>
+                <span class="skills">JavaScript</span>
+                <span class="skills">Thymeleaf</span>
+              </div>
             </div>
-          </div>
-
-          <div class="project_item hidden" id="job_platform2">
+            
+        </div>
+          <div class="project_item" id="job_platform2">
             <div class="project_title">원픽(구인구직 플랫폼 2)</div>
+            
+            <img src="/images/원픽 진짜.png" class="project_img active"/>
+            <img src="/images/원픽.png" class="project_img"/>
             <div class="project_info">
-              <span>개발 인원 : 팀프로젝트 (5명)</span>
-              <span>개발 기간 : 24.06.11 - 24.06.21</span>
+              <span>개발 인원 : 팀프로젝트 (5명) || 개발 기간 : 24.06.11 - 24.06.21</span>
+              <div class="desc">
+                원픽은 구직자와 구인자(고용주)를 효율적으로 연결해주는 플랫폼으로, 
+                <strong>지원 및 채용 과정 관리와 알림서비스,</strong> 리뷰 및 평점을 남길 수 있는 서비스를 제공합니다. 
+                이번 프로젝트에서는 첫 번째 프로젝트(잡왕 - 구인구직 플랫폼 1)의 성과를 바탕으로 기능을 
+                고도화하는데 중점을 두었습니다.
+              </div>
+              <div class="hover-info">
+                <div class="img_container onepick">
+                  <img
+                  src="/images/free-icon-file-1150592-white.png"
+                  alt="상세보기"
+                  class="contact_icon file_icon"
+                  />
+                  <img
+                  src="/images/free-icon-github-733609-white.png"
+                  alt="github"
+                  class="contact_icon github_white_icon"
+                  />
+                </div>
+              </div>
               <div class="skill_container">
                 <span class="skills">Spring Boot</span>
                 <span class="skills">Spring Security</span>
@@ -223,36 +291,33 @@
                 <span class="skills">JSP</span>
               </div>
             </div>
-            <div class="project_detail">
-              <ul>
-                <div class="sub_title">기술 지원 역할</div>
-                <li>팀 내 기술 지원 역할을 맡아 팀원들의 문제를 함께 해결</li>
-              </ul>
-              <ul>
-                <div class="sub_title">Spring Security와 JWT 적용</div>
-                <li>JWT 토큰을 활용하여 사용자 세션을 관리하고, 특정 페이지에 대한 접근 권한을 설정</li>
-              </ul>
-              <ul>
-                <div class="sub_title"> View와 REST 서버 분리</div>
-                <li>클라이언트와 서버 간의 비동기 통신을 통해 데이터 전송 및 업데이트를 효율적으로 처리</li>
-              </ul>
-              <ul>
-                <div class="sub_title">푸시알림</div>
-                <li>
-                  Firebase Cloud Messaging(FCM)을 사용하여 실시간 알림 수·송신 기능 구현
-                </li>
-                <li>
-                  FCM 토큰은 만료기한이 없다는 점을 고려, lastTokenUsedTime 속성을 추가하여 토큰의 마지막 사용시점을 추적, @scheduled 어노테이션을 사용하여 일정기간(30일) 이상 사용되지 않는 토큰은 자동으로 삭제되도록 구현하여 보안성 증대 및 리소스 낭비 방지
-                </li>
-              </ul>
-            </div>
           </div>
 
-          <div class="project_item hidden" id="job_platform1">
+          <div class="project_item" id="job_platform1">
             <div class="project_title">잡왕(구인구직 플랫폼 1)</div>
+            <img src="/images/잡왕진짜.png" class="project_img active"/>
+            <img src="/images/잡왕웹.png" class="project_img"/>
             <div class="project_info">
-              <span>개발 인원 : 팀프로젝트 (5명)</span>
-              <span>개발 기간 : 24.05.10 - 24.05.24</span>
+              <span>개발 인원 : 팀프로젝트 (5명) || 개발 기간 : 24.05.10 - 24.05.24</span>
+              <div class="desc">
+                두 번에 걸친 구인구직 플랫폼 개발 팀 프로젝트 중 첫번째 프로젝트인 잡왕은 
+                <strong>구직자 프로필 관리, 구인 공고 게시 및 구직자와 공고 매칭 기능</strong>과 리뷰 및 평점 남기기 서비스를 
+                제공하고 있습니다.
+              </div>
+              <div class="hover-info">
+                <div class="img_container">
+                  <img
+                  src="/images/free-icon-file-1150592-white.png"
+                  alt="상세보기"
+                  class="contact_icon file_icon"
+                  />
+                  <img
+                  src="/images/free-icon-github-733609-white.png"
+                  alt="github"
+                  class="contact_icon github_white_icon"
+                  />
+                </div>
+              </div>
               <div class="skill_container">
                 <span class="skills">Spring Boot</span>
                 <span class="skills">MariaDB</span>
@@ -261,29 +326,29 @@
                 <span class="skills">Thymeleaf</span>
               </div>
             </div>
-            <div class="project_detail">
-              <ul>
-                <div class="sub_title">회원가입/로그인</div>
-                <li>
-                  아스키코드표(ASCII)를 사용하여 직접 비밀번호 유효성 검사 클래스를 구현
-                </li>
-              </ul>
-              <ul>
-                <div class="sub_title">채용공고 조회 및 이력서 지원</div>
-                <li>
-                  채용공고를 지역별, 업종별, 직무별로 조회할 수 있는 세분화된 필터링 기능 구현
-                </li>
-                <li>
-                  실시간 지원 현황을 불러와 Chart.js를 사용하여 그래프로 데이터 시각화
-                </li>
-              </ul>
-            </div>
           </div>
-        </div>
+        
       </div>
     </section>
     <footer>
       <p>&copy; 2024 유지아 포트폴리오 </p>
+      <div class="contact_container">
+        <img 
+          style="width: 30px; height: 30px;"
+          src="/images/free-icon-cv-7198116.png"
+          alt="resume"
+          class="contact_icon resume_icon" />
+        <img 
+          style="width: 30px; height: 30px;"
+          src="/images/free-icon-email-3178158.png"
+          alt="email"
+          class="contact_icon email_icon" />
+        <img 
+          style="width: 30px; height: 30px;"
+          src="/images/free-icon-github-733609.png"
+          alt="github"
+          class="contact_icon github_icon" />
+      </div>
     </footer>
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
