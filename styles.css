@@ -76,49 +76,58 @@ body {
   padding: 0 50px;
   position: relative;
   width: 100%;
+  animation: fadeIn 2s ease-in-out;
 }
-
-.code-container {
-  word-wrap: break-word; /* Handle long words */
-  overflow: hidden;
-  font-size: 1em;
-  background: #f4f4f4;
-  width: 70%;
-  margin: 0 auto;
-  font-family: "Noto Sans KR", sans-serif;
-  text-align: left;
-  position: relative;
-  animation: fadeIn 2s;
-}
-
-.typing-output {
-  margin-top: 20px;
-  font-family: "Noto Sans KR", sans-serif;
-  font-size: 1.2em;
+.colorscripter-code {
   color: #010101;
-  white-space: pre-wrap;
-  word-wrap: break-word;
-  position: relative;
-  animation: fadeIn 2s;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace !important;
+  position: relative !important;
+  overflow: auto;
+  width: 150vh;
+  background-color: #f4f4f4;
 }
-
-.cursor {
-  display: inline-block;
-  width: 3px;
-  height: 1em;
-  background: black;
-  animation: blink-caret 0.75s step-end infinite;
-  vertical-align: bottom; /* Align the cursor with the text */
-  line-height: inherit; /* Inherit the line height from the parent */
+.colorscripter-code-table {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: #f4f4f4;
+  border-radius: 4px;
 }
-
+.code-line {
+  margin: 0;
+  padding: 0;
+  word-break: normal;
+  text-align: right;
+  color: #666;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace !important;
+  line-height: 130%;
+}
+.code-content {
+  padding: 0 6px;
+  white-space: pre;
+  line-height: 130%;
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+.typing {
+  overflow: hidden; /* ensures that the typing animation stays within bounds */
+  white-space: pre; /* keeps the text from wrapping */
+  border-right: 2px solid; /* gives the cursor effect */
+  animation: typing 5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
 @keyframes blink-caret {
   from,
   to {
-    background: transparent;
+    border-color: transparent;
   }
   50% {
-    background: black;
+    border-color: black;
   }
 }
 

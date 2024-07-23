@@ -8,28 +8,6 @@ const projectInfoItems = document.querySelectorAll(".project_info");
 const icons = document.querySelectorAll(".contact_icon");
 
 document.addEventListener("DOMContentLoaded", function () {
-  const typingOutput = document.getElementById("typing-output");
-
-  const typingText = `안녕하세요. 유지아입니다. 코딩할 때는 Java, 대화할 때는 영어, 둘 다 제가 좋아하는 언어입니다!
-문제를 파악해 해결책을 코드로 구현할 수 있으며, 오류를 분석해 문제를 수정할 수 있습니다.`;
-
-  let textIndex = 0;
-
-  function typeText() {
-    if (textIndex < typingText.length) {
-      typingOutput.innerHTML =
-        typingText.substring(0, textIndex).replace(/\n/g, "<br>") +
-        '<span class="cursor">|</span>';
-      textIndex++;
-      setTimeout(typeText, 40);
-    } else {
-      typingOutput.innerHTML =
-        typingText.replace(/\n/g, "<br>") + '<span class="cursor">|</span>'; // Keep the cursor at the end after typing
-    }
-  }
-
-  setTimeout(typeText, 2000);
-
   icons.forEach((icon) => {
     icon.addEventListener("click", function (event) {
       if (event.target.classList.contains("resume_icon")) {
