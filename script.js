@@ -1,5 +1,28 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const icons = document.querySelectorAll(".contact_icon");
+
+const code = `
+       
+
+ `;
+
+const codeBlock = document.getElementById("code-block");
+
+let index = 0;
+
+function typeCode() {
+    if (index < code.length) {
+      codeBlock.innerHTML += code[index] === "\n" ? "<br>" : code[index];
+      index++;
+      setTimeout(typeCode, 50);
+    } else {
+      hljs.highlightElement(codeBlock);
+    }
+}
+
+typeCode();
+
+const icons = document.querySelectorAll(".contact_icon");
+
 
   icons.forEach((icon) => {
     icon.addEventListener("click", function (event) {

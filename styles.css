@@ -1,10 +1,13 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Noto Sans KR", sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   line-height: 1.6;
   background-color: #f4f4f4;
+}
+ul{
+  list-style: none
 }
 
 .hamburger-menu {
@@ -59,13 +62,17 @@ body {
 
 #intro {
   background: #f4f4f4;
-  height: 100vh;
+  height: 90vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
   text-align: center;
   padding: 0 50px;
   position: relative;
+}
+
+.language-java {
+  margin: 0 auto;
 }
 
 .intro-content {
@@ -117,20 +124,6 @@ body {
   content: url("/images/exact_colored_github.png");
 }
 
-.project_item {
-  border-radius: 20px;
-  border: 1px solid grey;
-  margin: 20px 0;
-  padding: 20px;
-  opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 1s, transform 1s;
-}
-
-.project_item.show {
-  opacity: 1;
-  transform: translateY(0);
-}
 
 @keyframes fadeIn {
   0% {
@@ -151,15 +144,17 @@ body {
     opacity: 1;
   }
 }
-#project,
+
 #about {
-  max-width: 1000px;
+  width: 110vh;
   margin: 0 auto;
 }
 
 #project {
   display: flex;
   flex-direction: row;
+  width: 110vh;
+  margin: 0 auto;
 }
 
 #about,
@@ -182,6 +177,45 @@ body {
   visibility: hidden;
 }
 
+.project_item {
+
+  margin: 20px 0;
+  padding: 30px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s, transform 1s;
+}
+
+.project_info span{
+  margin: 10px;
+
+}
+
+.project_title{
+  font-weight: bold;
+  font-size: 30px;
+  margin:10px;
+}
+
+.sub_title{
+  font-weight: bolder;
+  font-size: 20px;
+  color:#5a4680
+}
+
+.skill_container{
+  margin: 10px;
+}
+
+
+.skills{
+  border: 1px solid #a890d6;
+  border-radius: 50px;
+  color: #f4f4f4;
+  background-color: #a890d6;
+  padding:5px;
+}
+
 @media (max-width: 768px) {
   .intro-content {
     flex-direction: column;
@@ -195,3 +229,5 @@ body {
     flex-direction: column;
   }
 }
+
+
