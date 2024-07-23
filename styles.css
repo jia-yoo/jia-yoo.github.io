@@ -75,7 +75,7 @@ body {
   text-align: center;
   padding: 0 50px;
   position: relative;
-  width: 100%;
+  width: 180vh;
   animation: fadeIn 2s ease-in-out;
 }
 .colorscripter-code {
@@ -230,7 +230,7 @@ h1 {
 #project {
   display: flex;
   flex-direction: row;
-  /* width: 110vh; */
+  width: 180vh;
   margin: 0 auto;
 }
 #skills {
