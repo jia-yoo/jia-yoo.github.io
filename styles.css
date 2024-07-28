@@ -222,12 +222,7 @@ h1 {
   }
 }
 
-#about{
-  width: 180vh;
-  margin: 0 auto;
-}
-
-.container {
+#about {
   width: 130vh;
   margin: 0 auto;
 }
@@ -384,7 +379,6 @@ footer {
   text-align: center;
   padding: 50px;
   background-color: #f1f1f1;
-  width: 180vh;
 }
 
 @media (max-width: 768px) {
