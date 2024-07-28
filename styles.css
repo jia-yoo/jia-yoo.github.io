@@ -140,6 +140,7 @@ body {
   animation: fadeIn 2s ease-in-out;
   margin: 0 auto;
 }
+
 .introduction {
   margin-top: 30px;
 }
@@ -301,7 +302,7 @@ h4 {
   max-width: 600px;
   margin-bottom: 20px;
   margin: 20px 0;
-  padding: 30px;
+  padding: 10px;
   transform: translateY(50px);
   transition: opacity 1s, transform 1s;
 }
@@ -378,7 +379,7 @@ h4 {
 footer {
   text-align: center;
   padding: 50px;
-  background-color: #f1f1f1;
+  width: 180vh;
 }
 
 @media (max-width: 768px) {
