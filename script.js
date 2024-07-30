@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
           );
         } else if (event.target.parentElement.classList.contains("onepick")) {
           window.open(
-            "https://drive.google.com/file/d/1ixqWIfH7KiMiFBZBcNiLYxbLyq5TwWws/view?usp=sharing",
+            "https://acrobat.adobe.com/id/urn:aaid:sc:AP:93b2c643-be45-474e-bd83-aa7faed910b7",
             "_blank"
           );
         } else {
