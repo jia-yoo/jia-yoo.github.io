@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
       } else if (event.target.classList.contains("file_icon")) {
         if (event.target.parentElement.classList.contains("pet_care")) {
           window.open(
-            "https://drive.google.com/file/d/1ixqWIfH7KiMiFBZBcNiLYxbLyq5TwWws/view?usp=sharing",
+            "https://acrobat.adobe.com/id/urn:aaid:sc:AP:d9974fff-fed8-48a0-a098-b81c27f61d3c",
             "_blank"
           );
         } else if (event.target.parentElement.classList.contains("onepick")) {
@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
           );
         } else {
           window.open(
-            "https://drive.google.com/file/d/1YR3kzhQhFRYBmuJDJtUCvjaKVgdNzycw/view?usp=sharing",
+            "https://acrobat.adobe.com/id/urn:aaid:sc:ap:a01a76d5-b0e7-477a-9148-8902ecf24b2b",
             "_blank"
           );
         }
