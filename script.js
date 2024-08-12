@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
       } else if (event.target.classList.contains("file_icon")) {
         if (event.target.parentElement.classList.contains("pet_care")) {
           window.open(
-            "https://acrobat.adobe.com/id/urn:aaid:sc:AP:8a98dcc4-9948-41e0-aa5d-2685c9c79632",
+            "https://acrobat.adobe.com/id/urn:aaid:sc:AP:94765680-af7a-451a-bc9d-6ea98abfe42e",
             "_blank"
           );
         } else if (event.target.parentElement.classList.contains("onepick")) {
