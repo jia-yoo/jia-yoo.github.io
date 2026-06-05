@@ -1,46 +1,46 @@
 const hamburgerMenu = document.getElementById("hamburger-menu");
 const sidebar = document.getElementById("sidebar");
-const aboutSection = document.querySelector("#about");
-const skillsSection = document.querySelector("#skills");
-const projectSection = document.querySelector("#project");
-const projectItems = document.querySelectorAll(".project_item");
-const projectInfoItems = document.querySelectorAll(".project_info");
-const icons = document.querySelectorAll(".contact_icon");
+const sections = document.querySelectorAll("section.hidden");
+const icons = document.querySelectorAll(
+  ".contact_icon, .intro-link, .about-icon-btn",
+);
 
 document.addEventListener("DOMContentLoaded", function () {
   icons.forEach((icon) => {
     icon.addEventListener("click", function (event) {
-      if (event.target.classList.contains("resume_icon")) {
+      const el = event.currentTarget;
+      if (el.classList.contains("resume_icon")) {
         window.open("/images/유지아 이력서.pdf", "_blank");
-      } else if (event.target.classList.contains("email_icon")) {
-        console.log("email");
+      } else if (el.classList.contains("project_icon")) {
+        window.open("/images/유지아 경력기술서.pdf", "_blank");
+      } else if (el.classList.contains("email_icon")) {
         location.href = "mailto:jiayoo.dev@gmail.com";
-      } else if (event.target.classList.contains("github_icon")) {
+      } else if (el.classList.contains("github_icon")) {
         window.open("https://github.com/jia-yoo", "_blank");
-      } else if (event.target.classList.contains("file_icon")) {
-        if (event.target.parentElement.classList.contains("pet_care")) {
+      } else if (el.classList.contains("file_icon")) {
+        if (el.parentElement.classList.contains("pet_care")) {
           window.open(
             "https://acrobat.adobe.com/id/urn:aaid:sc:AP:94765680-af7a-451a-bc9d-6ea98abfe42e",
-            "_blank"
+            "_blank",
           );
-        } else if (event.target.parentElement.classList.contains("onepick")) {
+        } else if (el.parentElement.classList.contains("onepick")) {
           window.open(
             "https://acrobat.adobe.com/id/urn:aaid:sc:AP:93b2c643-be45-474e-bd83-aa7faed910b7",
-            "_blank"
+            "_blank",
           );
         } else {
           window.open(
             "https://acrobat.adobe.com/id/urn:aaid:sc:ap:a01a76d5-b0e7-477a-9148-8902ecf24b2b",
-            "_blank"
+            "_blank",
           );
         }
-      } else if (event.target.classList.contains("github_white_icon")) {
-        if (event.target.parentElement.classList.contains("pet_care")) {
+      } else if (el.classList.contains("github_white_icon")) {
+        if (el.parentElement.classList.contains("pet_care")) {
           window.open(
             "https://github.com/jia-yoo/Animal_Hospital_Reservation",
-            "_blank"
+            "_blank",
           );
-        } else if (event.target.parentElement.classList.contains("onepick")) {
+        } else if (el.parentElement.classList.contains("onepick")) {
           window.open("https://github.com/jia-yoo/onepick", "_blank");
         } else {
           window.open("https://github.com/jia-yoo/Jobking", "_blank");
@@ -50,11 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   hamburgerMenu.addEventListener("click", function () {
-    if (sidebar.style.width === "250px") {
-      closeSidebar();
-    } else {
-      openSidebar();
-    }
+    sidebar.style.width = sidebar.style.width === "220px" ? "0" : "220px";
   });
 
   document.addEventListener("click", function (event) {
@@ -62,63 +58,55 @@ document.addEventListener("DOMContentLoaded", function () {
       !sidebar.contains(event.target) &&
       !hamburgerMenu.contains(event.target)
     ) {
-      closeSidebar();
+      sidebar.style.width = "0";
     }
   });
 
-  function openSidebar() {
-    sidebar.style.width = "250px";
-  }
-
-  function closeSidebar() {
-    sidebar.style.width = "0";
-  }
-
   window.addEventListener("scroll", function () {
-    const aboutSectionPos = aboutSection.getBoundingClientRect().top;
-    const skillsSectionPos = skillsSection.getBoundingClientRect().top;
-    const projectItemPos = projectSection.getBoundingClientRect().top;
-    const screenPos = window.innerHeight / 1.3;
-
-    if (aboutSectionPos < screenPos) {
-      aboutSection.classList.add("show");
-      aboutSection.classList.remove("hidden");
-    } else {
-      aboutSection.classList.add("hidden");
-      aboutSection.classList.remove("show");
-    }
-    if (skillsSectionPos < screenPos) {
-      skillsSection.classList.add("show");
-      skillsSection.classList.remove("hidden");
-    } else {
-      skillsSection.classList.add("hidden");
-      skillsSection.classList.remove("show");
-    }
-
-    if (projectItemPos < screenPos) {
-      projectSection.classList.add("show");
-      projectSection.classList.remove("hidden");
-    } else {
-      projectSection.classList.add("hidden");
-      projectSection.classList.remove("show");
-    }
+    const screenPos = window.innerHeight / 1.2;
+    sections.forEach((section) => {
+      const pos = section.getBoundingClientRect().top;
+      if (pos < screenPos) {
+        section.classList.add("show");
+        section.classList.remove("hidden");
+      } else {
+        section.classList.add("hidden");
+        section.classList.remove("show");
+      }
+    });
   });
 });
 
-projectItems.forEach((projectItem) => {
-  const images = projectItem.querySelectorAll("img");
-  if (images.length > 0) {
-    images[0].classList.add("active"); // 첫 번째 이미지를 기본 활성화
-  }
+// 실무 프로젝트 카드 하나씩 애니메이션
+const expCards = document.querySelectorAll(".exp-card-animate");
+const cardObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+      } else {
+        entry.target.classList.remove("visible");
+      }
+    });
+  },
+  { threshold: 0.15 },
+);
 
-  projectItem.addEventListener("mouseover", function () {
+expCards.forEach((card, i) => {
+  card.style.transitionDelay = `${i * 0.15}s`;
+  cardObserver.observe(card);
+});
+
+document.querySelectorAll(".project_item").forEach((item) => {
+  const images = item.querySelectorAll("img");
+  if (images.length > 0) images[0].classList.add("active");
+  item.addEventListener("mouseover", () => {
     if (images.length > 1) {
       images[0].classList.remove("active");
       images[1].classList.add("active");
     }
   });
-
-  projectItem.addEventListener("mouseout", function () {
+  item.addEventListener("mouseout", () => {
     if (images.length > 1) {
       images[1].classList.remove("active");
       images[0].classList.add("active");

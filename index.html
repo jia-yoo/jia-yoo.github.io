@@ -1,370 +1,576 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
+    <title>유지아 — Java/Spring 백엔드 개발자</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="mouse_style.css" />
-    <link rel="stylesheet" href="a11y-light.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/a11y-light.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
-
   </head>
   <body>
+    <!-- HAMBURGER -->
     <div class="hamburger-menu" id="hamburger-menu">
       <div class="bar"></div>
       <div class="bar"></div>
       <div class="bar"></div>
     </div>
+
+    <!-- SIDEBAR -->
     <div class="sidebar" id="sidebar">
       <nav>
         <ul>
           <li><a href="#intro">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#skills">Skills</a></li>
+          <li><a href="#experience">Experience</a></li>
           <li><a href="#project">Projects</a></li>
         </ul>
       </nav>
     </div>
-    <section id="intro">
-      <div class="code-container">
-           <div class="colorscripter-code" style="color:#010101;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto; width: 150vh; background-color: #f4f4f4;"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#f4f4f4;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #f4f4f4"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#666;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:120%"><div style="line-height:120%">1</div><div style="line-height:120%">2</div><div style="line-height:120%">3</div><div style="line-height:120%">4</div><div style="line-height:120%">5</div><div style="line-height:120%">6</div><div style="line-height:120%">7</div><div style="line-height:120%">8</div><div style="line-height:120%">9</div><div style="line-height:120%">10</div><div style="line-height:120%">11</div><div style="line-height:120%">12</div><div style="line-height:120%">13</div><div style="line-height:120%">14</div><div style="line-height:120%">15</div><div style="line-height:120%">16</div><div style="line-height:120%">17</div><div style="line-height:120%">18</div><div style="line-height:120%">19</div><div style="line-height:120%">20</div><div style="line-height:120%">21</div><div style="line-height:120%">22</div><div style="line-height:120%">23</div><div style="line-height:120%">24</div><div style="line-height:120%">25</div><div style="line-height:120%">26</div><div style="line-height:120%">27</div><div style="line-height:120%">28</div><div style="line-height:120%">29</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#010101;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:120%"><div style="padding:0 6px; white-space:pre; line-height:120%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a71d5d">static</span>&nbsp;<span style="color:#a71d5d">class</span>&nbsp;JuniorDeveloper&nbsp;<span style="color:#a71d5d">extends</span>&nbsp;BaseDeveloper&nbsp;<span style="color:#a71d5d">implements</span>&nbsp;QuickLearner&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:120%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#066de2">String</span>&nbsp;favoriteLanguage;</div><div style="padding:0 6px; white-space:pre; line-height:120%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#066de2">boolean</span>&nbsp;fluentInEnglish;</div><div style="padding:0 6px; white-space:pre; line-height:120%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:120%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;JuniorDeveloper(<span style="color:#066de2">String</span>&nbsp;name,&nbsp;<span style="color:#066de2">String</span>&nbsp;favoriteLanguage,&nbsp;<span style="color:#066de2">boolean</span>&nbsp;fluentInEnglish)&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:120%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a71d5d">super</span>(name);</div><div style="padding:0 6px; white-space:pre; line-height:120%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a71d5d">this</span>.favoriteLanguage&nbsp;<span style="color:#0086b3"></span><span style="color:#a71d5d">=</span>&nbsp;favoriteLanguage;</div><div style="padding:0 6px; white-space:pre; line-height:120%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a71d5d">this</span>.fluentInEnglish&nbsp;<span style="color:#0086b3"></span><span style="color:#a71d5d">=</span>&nbsp;fluentInEnglish;</div><div style="padding:0 6px; white-space:pre; line-height:120%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</div><div style="padding:0 6px; white-space:pre; line-height:120%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:120%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@Override</div><div style="padding:0 6px; white-space:pre; line-height:120%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a71d5d">void</span>&nbsp;introduce()&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:120%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#066de2">System</span>.<span style="color:#066de2">out</span>.<span style="color:#066de2">println</span>(<span style="color:#63a35c">"안녕하세요&nbsp;:)&nbsp;주니어&nbsp;백엔드&nbsp;개발자&nbsp;"</span>&nbsp;<span style="color:#0086b3"></span><span style="color:#a71d5d">+</span>&nbsp;name&nbsp;<span style="color:#0086b3"></span><span style="color:#a71d5d">+</span>&nbsp;<span style="color:#63a35c">"입니다."</span>);</div><div style="padding:0 6px; white-space:pre; line-height:120%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#066de2">System</span>.<span style="color:#066de2">out</span>.<span style="color:#066de2">println</span>(<span style="color:#63a35c">"코딩할&nbsp;때는&nbsp;"</span>&nbsp;<span style="color:#0086b3"></span><span style="color:#a71d5d">+</span>&nbsp;favoriteLanguage&nbsp;<span style="color:#0086b3"></span><span style="color:#a71d5d">+</span>&nbsp;<span style="color:#63a35c">",&nbsp;대화할&nbsp;때는&nbsp;영어,&nbsp;둘&nbsp;다&nbsp;제가&nbsp;좋아하는&nbsp;언어입니다!"</span>);</div><div style="padding:0 6px; white-space:pre; line-height:120%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</div><div style="padding:0 6px; white-space:pre; line-height:120%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:120%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@Override</div><div style="padding:0 6px; white-space:pre; line-height:120%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a71d5d">public</span>&nbsp;<span style="color:#a71d5d">void</span>&nbsp;writeAndDebugCode()&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:120%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#066de2">System</span>.<span style="color:#066de2">out</span>.<span style="color:#066de2">println</span>(<span style="color:#63a35c">"문제를&nbsp;파악해&nbsp;해결책을"&nbsp;</span><span style="color:#0086b3"></span><span style="color:#a71d5d">+</span>&nbsp;favoriteLanguage&nbsp;<span style="color:#0086b3"></span><span style="color:#a71d5d">+</span><span style="color:#63a35c">&nbsp;"코드로&nbsp;구현할&nbsp;수&nbsp;있으며,&nbsp;오류를&nbsp;분석해&nbsp;문제를&nbsp;수정할&nbsp;수&nbsp;있습니다."</span>);</div><div style="padding:0 6px; white-space:pre; line-height:120%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</div><div style="padding:0 6px; white-space:pre; line-height:120%">&nbsp;&nbsp;&nbsp;&nbsp;}</div><div style="padding:0 6px; white-space:pre; line-height:120%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:120%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a71d5d">public</span>&nbsp;<span style="color:#a71d5d">static</span>&nbsp;<span style="color:#a71d5d">void</span>&nbsp;main(<span style="color:#066de2">String</span>[]&nbsp;args)&nbsp;{</div><div class="main-method" style="padding:0 6px; white-space:pre; line-height:120%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;JuniorDeveloper&nbsp;developer&nbsp;<span style="color:#0086b3"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#a71d5d">new</span>&nbsp;JuniorDeveloper(<span style="color:#63a35c">"유지아"</span>,&nbsp;<span style="color:#63a35c">"Java"</span>,&nbsp;<span style="color:#0099cc">true</span>);</div><div style="padding:0 6px; white-space:pre; line-height:120%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;developer.introduce();</div><div style="padding:0 6px; white-space:pre; line-height:120%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;developer.writeAndDebugCode();</div><div style="padding:0 6px; white-space:pre; line-height:120%">&nbsp;&nbsp;&nbsp;&nbsp;}</div></div><div style="text-align:right;margin-top:-13px;margin-right:5px;font-size:9px;font-style:italic"></td></tr></table></div>
-           <div class="mouse-wrap">
-            <div class="mouse">
-              <div class="frame">
-                <svg version="1.1" id="mouse" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-             viewBox="0 0 54.9 91" style="enable-background:new 0 0 54.9 91;" xml:space="preserve">
-          <path id="XMLID_173_" class="st0"
-                linejoin="round" stroke-linecap="round" stroke-miterlimit="10" d="M27.4,3.6L27.4,3.6C14.2,3.6,3.5,14.3,3.5,27.5v36c0,13.2,10.7,23.9,23.9,23.9h0
-            c13.2,0,23.9-10.7,23.9-23.9v-36C51.4,14.3,40.7,3.6,27.4,3.6z"/>
-          </svg>
-          
-              </div>
-             
-              <div class="mouse-left">
-                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-             viewBox="0 0 27.4 91" style="enable-background:new 0 0 27.4 91;" xml:space="preserve">
-          <path 
-                linejoin="round" stroke-linecap="round" stroke-miterlimit="10"
-                class="Draw-Frame Animate-Draw" d="M27.4,87.5L27.4,87.5c-13.2,0-23.9-10.7-23.9-23.9v-36c0-13.2,10.7-23.9,23.9-23.9h0"/>
-          </svg>
-          
-              </div>
-              
-              <div class="mouse-right">
-                <svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-             viewBox="0 0 27.4 91" style="enable-background:new 0 0 27.4 91;" xml:space="preserve">
-          <path 
-                linejoin="round" stroke-linecap="round" stroke-miterlimit="10"
-                class="Draw-Frame Animate-Draw" d="M0,3.6L0,3.6c13.2,0,23.9,10.7,23.9,23.9v36c0,13.2-10.7,23.9-23.9,23.9h0"/>
-          </svg>
-              </div>
-            </div>
-            <p id="scroll">Scroll</p>
-          </div>
-            
-    </section>
-    <section id="about" class="hidden">
-      <div class="container">
-        <div class="text-content">
-          <h2>About Me</h2>
-          <div class="intro-content">
-            <div class="profile-pic-container">
-              <img
-                src="/images/profile.jpg"
-                alt="Profile Picture"
-                class="profile-pic" />
-            </div>
-            <div class="intro-text">
-              <h1>유지아</h1>
-              <p class="sub_title">성실함을 바탕으로 꾸준히 성장하는 개발자</p>
-            
-            <div class="contact_container">
-              <img
-                src="/images/free-icon-cv-7198116.png"
-                alt="resume"
-                class="contact_icon resume_icon" />
-              <img
-                src="/images/free-icon-email-3178158.png"
-                alt="email"
-                class="contact_icon email_icon" />
-              <img
-                src="/images/free-icon-github-733609.png"
-                alt="github"
-                class="contact_icon github_icon" />
-            </div>
-          </div>
-          </div>
-          <div class="introduction">
-            6년 간의 호주 생활을 통해, 다양한 문화권의 사람들과 협업하며 <strong>비즈니스 영어 능력을 포함한 효율적인 의사소통 능력</strong>을 갖추게 되었습니다. </br>
-            맡은 업무를 책임감 있게 성실히 수행하는 모습을 인정받아, 로컬 중심의 회사에서 <strong>첫 외국인 Supervisor로 승진</strong>하며 팀을 이끌 수 있는 기회도 얻을 수 있었습니다.</br>
-          </br>
-            세 번의 팀 프로젝트를 통해 협업 능력과 기술적 문제 해결 역량을 크게 발전시켰습니다. 첫 번째 프로젝트에서는 일정 지연에도 불구하고 더 많은 부분을 담당해 완수했고, </br>
-            두 번째, 세 번째 프로젝트에서는 <strong>기술 지원 역할을 맡아 팀원들의 문제를 함께 해결</strong>하고, 나아가 <strong>새로운 기술을 빠르게 학습하고 구현하여 일정보다 앞서 업무를 완료</strong>한 경험이 있습니다.</br>
-            이러한 경험을 통해 배운 성실함과 능동적인 태도로 회사의 발전에 기여하고, 꾸준히 성장하는 개발자가 되겠습니다. </br>
-          </div>
-        </div>
-      </div>
-              </div>
-            </div>
-            <div class="project_detail">
-              <ul>
-    </section>
-    <section id="skills" class="hidden">
-      <div class="container">
-        <div class="text-content">
-          <h2>Skills</h2>
-          <div class="skill_section">
-          <div class="skill_item">
-            <h3>언어 및 프레임 워크</h3>
-            <div class="java">
-              <h4>JAVA</h4>
-              <ul>
-                <li>객체지향 프로그래밍(OOP) 개념에 대해 이해하고 있으며, 상속과 제네릭을 사용한 무한배열 라이브러리 구현한 경험이 있습니다.</li>
-                <li>회원가입 및 로그인 기능에서 발생하는 다양한 예외 상황을 <strong>별도의 예외 처리 클래스를 구성</strong>하여 관리했습니다.</li>
-                <li>예약 프로그램에서 <strong>멀티스레딩을 사용하여 동시 예약으로 인한 데이터 충돌을 방지</strong>한 경험이 있습니다. </li>
-              </ul>
-            </div>
-            <div class="spring_boot">
-              <h4>Spring Boot</h4>
-              <ul>
-                <li>예약 관리 프로그램 내 <strong>시간 단위 변환 작업을 분리하여 AOP를 직접 구현</strong>한 경험이 있습니다.</li>
-                <li>RESTful 설계 원칙을 따르고, HTTP 메서드와 상태 코드를 사용해 클라이언트와 서버 간 통신을 관리할 수 있습니다.</li>
-                <li>Spring Security와 JWT를 적용해 권한이 없는 사용자의 요청을 처리한 경험이 있습니다.</li>
-              </ul>
-            </div>
-          </div>
-          <div class="skill_item">
-            <h3>데이터 베이스</h3>
-            <div class="MariaDB">
-              <h4>MariaDB</h4>
-              <ul>
-                <li>CRUD 쿼리 작성, JOIN, TRIGGER, PROCEDURE 사용할 수 있습니다.</li>
-                <li>데이터베이스의 성능과 무결성을 위해 <strong>필요에 따라 테이블을 정규화 또는 비정규화</strong>할 수 있습니다.</li>
-              </ul>
-            </div>
-            <div class="myBatis">
-              <h4>MyBatis</h4>
-              <ul>
-                <li>  &lt;if &gt;,  &lt;foreach &gt; 등의 태그를 사용하여 동적 SQL을 구성할 수 있습니다.</li>
-              </ul>
-            </div>
-            <div class="jpa">
-              <h4>JPA</h4>
-              <ul>
-                <li>어노테이션을 사용해 객체와 테이블을 매핑하고, 객체 간 관계를 정의할 수 있습니다.</li>
-                <li>JPQL을 활용해 <strong>객체 지향 쿼리를 작성</strong>할 수 있습니다.</li>
-              </ul>
-            </div>
-          </div>
-     
-        
-          </div>
-          <div class="skill_section">
-            <div class="skill_item">
-              <h3>웹 기술</h3>
-              <div class="jsp&servlet">
-                <h4>JSP & Servlet</h4>
-                <ul>
-                  <li>MVC 패턴으로 회원전용 게시판을 구현한 경험이 있습니다.</li>
-                  <li>어플리케이션, 페이지, 세션 컨텍스트와 쿠키의 개념을 이해하고, 상황에 맞게 데이터를 관리할 수 있습니다.</li>
-                </ul>
-              </div>
-              <div class="Thymeleaf">
-                <h4>Thymeleaf</h4>
-                <ul>
-                  <li>HTML을 동적으로 생성할 수 있습니다.</li>
-                </ul>
-              </div>
-              <div class="html/css">
-                <h4>HTML/CSS</h4>
-                <ul>
-                  <li>Flex, grid를 활용한 레이아웃을 구성할 수 있으며, 미디어 쿼리를 사용해 반응형 웹 디자인을 적용한 경험이 있습니다.</li>
-                 </ul>
-              </div>
-              <div class="javascript">
-                <h4>JavaScript</h4>
-                <ul>
-                  <li>ES6의 문법을 이해하고 사용할 수 있으며, 동적으로 DOM 요소를 생성하고, 다양한 이벤트를 처리할 수 있습니다.</li>
-                  <li>Promises와 async/await를 사용해 비동기 작업을 효율적으로 관리할 수 있습니다.</li>
-                  <li>Ajax와 Fetch API를 활용해 서버와 비동기적으로 데이터를 주고받을 수 있습니다.</li>
-                </ul>
-              </div>
-            </div>
-       
-          
-          <div class="skill_item">
-            <h3>협업 도구</h3>
-            <div class="github">
-              <h4>github</h4>
-              <ul>
-                <li>팀프로젝트를 하면서 여러 명이서 작업할 수 있는 환경을 구축할 수 있으며, 병합 충돌을 해결해본 적이 있습니다.</li>
-                 </ul>
-            </div>
-            <div class="notion">
-              <h4>Notion</h4>
-              <ul>
-                <li>팀 프로젝트의 요구사항 명세서, 업무일지, 일정표 등 다양한 문서를 저장 및 공유하여 작업 상태를 관리했습니다.</li>
-               </ul>
-            </div>
-          </div>
-        </div>
-        </div>
-      </div>
-    </section>
-    <section id="project" class="hidden">
-      <div class="container">
-        <h2>Project</h2>
-        <div class="project_container">
-          <div class="project_item" id="pet_care_platform">
-            <div class="project_title">견강할고양(반려동물 병원예약플랫폼)</div>
-            <img src="/images/loading.gif" class="project_img active"/>
-            <img src="/images/견강할고양.png" class="project_img" />
-            <div class="project_info">
-              <span>개발 인원 : 팀프로젝트 (5명) || 개발 기간 : 24.07.02 - 24.07.17 </span>
-             
-              <div class="desc">
-                "견강할고양"은 반려동물 병원 예약 플랫폼으로, 반려동물 주인들이 손쉽게 병원을 찾고 예약할 수 
-                있도록 돕기 위해 개발된 애플리케이션입니다. 이 플랫폼은 예약관리 뿐만 아니라 
-                지도로 병원 찾기, 문의 채팅, 미니게임 등 반려인과 동물병원 모두에게 편리하고 유익한 서비스를 제공합니다.
-                "견강할고양"은 행정안전부에서 제공하는 공공 데이터 API를 활용하여 <strong>전국에 실제로 존재하는 
-                5000+개 동물 병원 데이터를 사용</strong>하여 사용자에게 최신의 정확하고 신뢰성있는 데이터를 제공합니다.
-              </div>
-              <div class="hover-info">
-                <div class="img_container pet_care">
-                  <img
-                  src="/images/free-icon-file-1150592-white.png"
-                  alt="상세보기"
-                  class="contact_icon file_icon"
-                  />
-                  <img
-                  src="/images/free-icon-github-733609-white.png"
-                  alt="github"
-                  class="contact_icon github_white_icon"
-                  />
-                </div>
-              </div>
-              <div class="skill_container">
-                <span class="skills">Spring Boot</span>
-                <span class="skills">MariaDB</span>
-                <span class="skills">JPA </span>
-                <span class="skills">Spring Security</span>
-                <span class="skills">JWT</span>
-                <span class="skills">JavaScript</span>
-                <span class="skills">Thymeleaf</span>
-              </div>
-            </div>
-            
-        </div>
-          <div class="project_item" id="job_platform2">
-            <div class="project_title">원픽(구인구직 플랫폼 2)</div>
-            
-            <img src="/images/원픽 진짜.png" class="project_img active"/>
-            <img src="/images/원픽.png" class="project_img"/>
-            <div class="project_info">
-              <span>개발 인원 : 팀프로젝트 (5명) || 개발 기간 : 24.06.11 - 24.06.21</span>
-              <div class="desc">
-                원픽은 구직자와 구인자(고용주)를 효율적으로 연결해주는 플랫폼으로, 
-                <strong>지원 및 채용 과정 관리와 알림서비스,</strong> 리뷰 및 평점을 남길 수 있는 서비스를 제공합니다. 
-                이번 프로젝트에서는 첫 번째 프로젝트(잡왕 - 구인구직 플랫폼 1)의 성과를 바탕으로 기능을 
-                고도화하는데 중점을 두었습니다.
-              </div>
-              <div class="hover-info">
-                <div class="img_container onepick">
-                  <img
-                  src="/images/free-icon-file-1150592-white.png"
-                  alt="상세보기"
-                  class="contact_icon file_icon"
-                  />
-                  <img
-                  src="/images/free-icon-github-733609-white.png"
-                  alt="github"
-                  class="contact_icon github_white_icon"
-                  />
-                </div>
-              </div>
-              <div class="skill_container">
-                <span class="skills">Spring Boot</span>
-                <span class="skills">Spring Security</span>
-                <span class="skills">JWT</span>
-                <span class="skills">Firebase</span>
-                <span class="skills">MariaDB</span>
-                <span class="skills">JPA </span>
-                <span class="skills">JavaScript</span>
-                <span class="skills">JSP</span>
-              </div>
-            </div>
-          </div>
 
-          <div class="project_item" id="job_platform1">
-            <div class="project_title">잡왕(구인구직 플랫폼 1)</div>
-            <img src="/images/잡왕진짜.png" class="project_img active"/>
-            <img src="/images/잡왕웹.png" class="project_img"/>
-            <div class="project_info">
-              <span>개발 인원 : 팀프로젝트 (5명) || 개발 기간 : 24.05.10 - 24.05.24</span>
-              <div class="desc">
-                두 번에 걸친 구인구직 플랫폼 개발 팀 프로젝트 중 첫번째 프로젝트인 잡왕은 
-                <strong>구직자 프로필 관리, 구인 공고 게시 및 구직자와 공고 매칭 기능</strong>과 리뷰 및 평점 남기기 서비스를 
-                제공하고 있습니다.
-              </div>
-              <div class="hover-info">
-                <div class="img_container">
-                  <img
-                  src="/images/free-icon-file-1150592-white.png"
-                  alt="상세보기"
-                  class="contact_icon file_icon"
-                  />
-                  <img
-                  src="/images/free-icon-github-733609-white.png"
-                  alt="github"
-                  class="contact_icon github_white_icon"
-                  />
-                </div>
-              </div>
-              <div class="skill_container">
-                <span class="skills">Spring Boot</span>
-                <span class="skills">MariaDB</span>
-                <span class="skills">JPA </span>
-                <span class="skills">JavaScript</span>
-                <span class="skills">Thymeleaf</span>
-              </div>
+    <!-- INTRO -->
+    <section id="intro">
+      <div class="intro-inner">
+        <p class="intro-label">// 백엔드 개발자 포트폴리오</p>
+        <h1 class="intro-name">유지아</h1>
+        <p class="intro-role">Java / Spring <span>Backend Developer</span></p>
+        <p class="intro-desc">
+          일 150만 건 데이터 처리, 조회 응답시간 98% 개선 등<br />
+          실제 운영 환경에서 문제를 직접 직접 부딪히며 설계하고 해결한
+          개발자입니다.<br />
+          도메인을 가리지 않고 복잡한 시스템일수록 구조적으로 접근합니다.
+        </p>
+        <div class="intro-links">
+          <span class="intro-link primary resume_icon">Resume</span>
+          <span class="intro-link primary project_icon">Career</span>
+          <span class="intro-link email_icon">Email</span>
+          <span class="intro-link github_icon">GitHub</span>
+        </div>
+      </div>
+      <div class="scroll-hint">scroll</div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="hidden">
+      <h2>About</h2>
+      <div class="about-grid">
+        <div class="about-profile">
+          <img src="/images/profile.jpg" alt="유지아" class="profile-pic" />
+          <div class="about-meta">
+            <div class="about-meta-item">
+              <span>위치</span><span>남양주시, 대한민국</span>
+            </div>
+            <div class="about-meta-item">
+              <span>경력</span><span>1년 8개월</span>
+            </div>
+            <div class="about-meta-item">
+              <span>영어</span><span>비즈니스 레벨</span>
+            </div>
+            <div class="about-meta-item">
+              <span>자격증</span
+              ><span>정보처리기사, SQLD, 리눅스마스터 2급</span>
             </div>
           </div>
-        
+          <div class="about-icons" style="margin-top: 1.5rem">
+            <div class="about-icon-btn resume_icon">
+              <img src="/images/free-icon-cv-7198116.png" alt="resume" />
+            </div>
+            <div class="about-icon-btn project_icon">
+              <img src="/images/project.png" alt="career" />
+            </div>
+            <div class="about-icon-btn email_icon">
+              <img src="/images/free-icon-email-3178158.png" alt="email" />
+            </div>
+            <div class="about-icon-btn github_icon">
+              <img src="/images/free-icon-github-733609.png" alt="github" />
+            </div>
+          </div>
+        </div>
+        <div class="about-text">
+          <h3>유지아</h3>
+          <p class="about-sub">
+            운영 환경에서 직접 부딪히며 성장한 Java/Spring 백엔드 개발자
+          </p>
+          <div class="about-body">
+            <p>
+              <span class="hl">일 150만 건 데이터 처리</span>와
+              <span class="hl">조회 응답시간 98% 개선</span> 등, 실제 운영
+              환경에서 구조적 문제를 직접 설계하고 해결한 경험을 강점으로 삼고
+              있습니다. 스마트팩토리 MES, SCADA 연동, 농협 APC 시스템 등 다양한
+              산업 도메인에서 이기종 장비 연동부터 대용량 데이터 처리까지 폭넓은
+              백엔드 개발을 경험했습니다.
+            </p>
+            <p>
+              호주에서 6년간 생활하며
+              <span class="hl"
+                >로컬 중심의 회사에서 첫 외국인 Supervisor로 승진</span
+              >하며 팀을 이끌 수 있는 기회도 얻을 수 있었습니다. 다양한 문화권의
+              사람들과 협업하며 쌓은 비즈니스 영어 능력과 팀 오너십 경험이
+              개발자로서의 소통 방식에도 그대로 녹아있습니다.
+            </p>
+            <p>
+              도메인을 가리지 않고, 복잡한 시스템일수록 구조적으로 문제를
+              정의하고 해결하는 개발자를 지향합니다.
+              <span class="hl"
+                >서비스가 오래 운영될수록 더 안정적이고 관리하기 쉬워지는
+                방향</span
+              >을 항상 고민합니다.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="hidden">
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-block">
+          <p class="skill-block-title">Backend</p>
+          <h4>Java / Spring Boot · Spring MVC</h4>
+          <ul>
+            <li>OOP 기반 서비스 계층 구조 적용 및 구현, 트랜잭션 처리</li>
+            <li>RESTful API 개발 및 외부 API 연동</li>
+            <li>WebSocket, TCP/IP 소켓 통신 (Netty)</li>
+            <li>이벤트 기반 알림 API 설계 및 연동</li>
+          </ul>
+          <h4>MyBatis</h4>
+          <ul>
+            <li>동적 SQL, 매퍼 테이블 단위 구조 설계</li>
+            <li>프로시저 중심 로직의 서비스 계층 이관 경험</li>
+          </ul>
+        </div>
+        <div class="skill-block">
+          <p class="skill-block-title">Database</p>
+          <h4>MSSQL</h4>
+          <ul>
+            <li>Stored Procedure, DB Trigger, View 설계</li>
+            <li>트랜잭션, 쿼리 최적화</li>
+            <li>배치 아카이빙 구조 설계</li>
+            <li>브릿지 테이블 설계로 집계 정합성 확보</li>
+          </ul>
+        </div>
+        <div class="skill-block">
+          <p class="skill-block-title">Frontend &amp; Tools</p>
+          <h4>Frontend</h4>
+          <ul>
+            <li>JavaScript, jQuery, AJAX</li>
+            <li>Thymeleaf</li>
+            <li>HTML / CSS</li>
+          </ul>
+          <h4>Infra / Tools</h4>
+          <ul>
+            <li>Git, Docker, WinSW</li>
+            <li>RFID, PDA, 바코드 스캐너 연동</li>
+          </ul>
+          <div class="skill-tags">
+            <span class="skill-tag">정보처리기사</span>
+            <span class="skill-tag">SQLD</span>
+            <span class="skill-tag">리눅스마스터 2급</span>
+            <span class="skill-tag">영어 비즈니스 레벨</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="hidden">
+      <h2>Experience</h2>
+      <div class="exp-company">
+        <span>(주)태진시스템</span> · <span>백엔드 개발자</span> ·
+        <span>2024.09 – 2026.04</span>
+      </div>
+      <div class="exp-cards">
+        <!-- APC -->
+        <div class="exp-card exp-card-animate">
+          <div class="exp-card-head">
+            <span class="exp-card-title"
+              >한반도농협 스마트 APC 시스템 구축</span
+            >
+            <span class="exp-card-period">2025.05 – 2025.10</span>
+          </div>
+          <div class="exp-badges">
+            <span class="exp-badge badge-yellow">특허 출원 기여</span>
+            <span class="exp-badge badge-yellow"
+              >aT 디지털 전환 선도모델 선정</span
+            >
+            <span class="exp-badge badge-dim">개발 2명 · 메인 개발자</span>
+          </div>
+          <div class="exp-stats">
+            <div class="exp-stat">
+              <div class="exp-stat-num">150만 건</div>
+              <div class="exp-stat-label">일 최대 선별 데이터 처리</div>
+            </div>
+            <div class="exp-stat">
+              <div class="exp-stat-num">15개+</div>
+              <div class="exp-stat-label">선별기 인터페이스 연동</div>
+            </div>
+            <div class="exp-stat">
+              <div class="exp-stat-num">120–160건</div>
+              <div class="exp-stat-label">카카오 알림톡 일 자동 발송</div>
+            </div>
+          </div>
+          <p class="exp-sub">이기종 장비 연동</p>
+          <ul class="exp-list">
+            <li>
+              Netty 기반 TCP/IP 통신으로 중량대·PDA·RFID·휴대용 프린터 실시간
+              연동 구현
+            </li>
+            <li>
+              선별기 구현 제약에 따라 TCP/IP · 파일 업로드 · DB 트리거 3가지
+              방식으로 인터페이스 분기 적용
+            </li>
+            <li>
+              15개 이상 인터페이스 로그를 단일 서비스로 통합, 장애 발생 지점
+              즉시 식별 가능 구조 구축
+            </li>
+          </ul>
+          <p class="exp-sub">대용량 데이터 자동 적재 및 재처리</p>
+          <ul class="exp-list">
+            <li>
+              1회 선별 시 약 3만 건 파일 데이터 자동 적재, 인코딩·형식 오류 검증
+              및 중복 적재 방지 로직 구현
+            </li>
+            <li>
+              동일 식별자 파일 재업로드 시 기존 데이터 삭제 후 재적재, 개발자
+              개입 없는 운영자 자율 복구 구조 전환
+            </li>
+          </ul>
+          <p class="exp-sub">알림 API 트랜잭션 결함 개선</p>
+          <ul class="exp-list">
+            <li>
+              외부 알림 API 실패가 핵심 트랜잭션 롤백으로 이어지는 구조적 결함
+              발견
+            </li>
+            <li>
+              데이터 적재·알림 전송 책임 분리, 관리자 수동 재전송 기능 추가 →
+              사내 표준 기능 채택
+            </li>
+          </ul>
+          <div class="exp-tech">
+            <span class="exp-tag">Java</span
+            ><span class="exp-tag">Spring Boot</span
+            ><span class="exp-tag">MyBatis</span
+            ><span class="exp-tag">MSSQL</span><span class="exp-tag">Netty</span
+            ><span class="exp-tag">TCP/IP</span><span class="exp-tag">RFID</span
+            ><span class="exp-tag">REST API</span
+            ><span class="exp-tag">파일 워칭</span
+            ><span class="exp-tag">Docker</span>
+          </div>
+          <a
+            href="https://github.com/jia-yoo/smart-apc-system"
+            target="_blank"
+            class="exp-readme-btn"
+            >README 보기 →</a
+          >
+        </div>
+
+        <!-- SCADA -->
+        <div class="exp-card exp-card-animate">
+          <div class="exp-card-head">
+            <span class="exp-card-title">광우 MES-SCADA 연동 시스템 구축</span>
+            <span class="exp-card-period">2025.08 – 2025.12</span>
+          </div>
+          <div class="exp-badges">
+            <span class="exp-badge badge-yellow">조회 성능 98% 개선</span>
+            <span class="exp-badge badge-yellow">데이터 누락 0건</span>
+            <span class="exp-badge badge-dim"
+              >1년+ 지연 프로젝트 4개월 내 정상화</span
+            >
+          </div>
+          <div class="exp-stats">
+            <div class="exp-stat">
+              <div class="exp-stat-num">4만 건</div>
+              <div class="exp-stat-label">일 PLC 수집 데이터 처리</div>
+            </div>
+            <div class="exp-stat">
+              <div class="exp-stat-num">98%</div>
+              <div class="exp-stat-label">조회 응답시간 개선율</div>
+            </div>
+            <div class="exp-stat">
+              <div class="exp-stat-num">0건</div>
+              <div class="exp-stat-label">데이터 누락</div>
+            </div>
+          </div>
+          <p class="exp-sub">SCADA-MES 실시간 연계</p>
+          <ul class="exp-list">
+            <li>
+              TCP/IP 통신 불가 환경에서 DB 트리거 기반 동기화 구조 직접 설계,
+              데이터 누락 0건 달성
+            </li>
+            <li>
+              SCADA 조인 쿼리 제약을 DB View 설계로 우회, 단일 쿼리 전체 데이터
+              조회 가능 구조로 개선
+            </li>
+          </ul>
+          <p class="exp-sub">대용량 데이터 성능 개선</p>
+          <ul class="exp-list">
+            <li>
+              30초마다 적재되는 일 4만 건 누적 데이터로 30일 조회 5분 이상 소요
+              문제 발생
+            </li>
+            <li>
+              스케줄러 기반 파일 변환·백업 후 DB 삭제 구조 적용, 응답시간 수초
+              이내로 단축 (약 98% 개선)
+            </li>
+          </ul>
+          <p class="exp-sub">협업 프로세스 개선</p>
+          <ul class="exp-list">
+            <li>
+              구두 합의 번복이 반복되던 상황에서 정기 회의 및 변경사항 문서화
+              체계 직접 제안
+            </li>
+            <li>도입 후 합의 번복 0건, 일정 내 납기 완료</li>
+          </ul>
+          <div class="exp-tech">
+            <span class="exp-tag">Java</span
+            ><span class="exp-tag">Spring Boot</span
+            ><span class="exp-tag">MyBatis</span
+            ><span class="exp-tag">MSSQL</span
+            ><span class="exp-tag">DB Trigger</span
+            ><span class="exp-tag">DB View</span
+            ><span class="exp-tag">Scheduler</span
+            ><span class="exp-tag">Git</span><span class="exp-tag">WinSW</span>
+          </div>
+          <a
+            href="https://github.com/jia-yoo/mes-scada-integration-system"
+            target="_blank"
+            class="exp-readme-btn"
+            >README 보기 →</a
+          >
+        </div>
+
+        <!-- MES -->
+        <div class="exp-card exp-card-animate">
+          <div class="exp-card-head">
+            <span class="exp-card-title">신성산업 스마트팩토리 MES 구축</span>
+            <span class="exp-card-period">2025.08 – 2026.03</span>
+          </div>
+          <div class="exp-badges">
+            <span class="exp-badge badge-yellow"
+              >사내 최초 웹 기반 현장 프로그램 → 이후 표준 구조 채택</span
+            >
+            <span class="exp-badge badge-dim"
+              >개발 2명 · 메인 개발자 (후배 1인 리드)</span
+            >
+          </div>
+          <p class="exp-sub">CS 기반 현장 프로그램 웹 전환</p>
+          <ul class="exp-list">
+            <li>
+              VB.NET 클라이언트 유지보수 한계를 파악하고 웹 전환 직접 제안, 메인
+              개발자로 단독 구현
+            </li>
+            <li>
+              바코드 스캐너 연동 포함, 사내 최초 웹 기반 현장 프로그램으로 이후
+              프로젝트 표준 구조 채택
+            </li>
+          </ul>
+          <p class="exp-sub">서비스 계층 구조 전환</p>
+          <ul class="exp-list">
+            <li>
+              프로시저 중심 로직을 MyBatis 서비스 계층으로 이관, 트랜잭션
+              범위·롤백 기준 명시화
+            </li>
+            <li>
+              MyBatis 매퍼를 테이블 단위로 분리, 화면 서비스와 공통 테이블
+              서비스 구조 적용
+            </li>
+          </ul>
+          <p class="exp-sub">브릿지 테이블 설계로 데이터 정합성 확보</p>
+          <ul class="exp-list">
+            <li>
+              설비 1대-작업지시 1건만 가능한 기존 구조에서 배치 생산 환경의 중복
+              집계 결함 발견
+            </li>
+            <li>
+              설비-작업지시 관계 관리용 브릿지 테이블 직접 설계, 설비 가동률
+              데이터 정합성 확보
+            </li>
+          </ul>
+          <div class="exp-tech">
+            <span class="exp-tag">Java</span
+            ><span class="exp-tag">Spring Boot</span
+            ><span class="exp-tag">MyBatis</span
+            ><span class="exp-tag">MSSQL</span
+            ><span class="exp-tag">Thymeleaf</span
+            ><span class="exp-tag">JavaScript</span
+            ><span class="exp-tag">jQuery</span
+            ><span class="exp-tag">Docker</span>
+          </div>
+          <a
+            href="https://github.com/jia-yoo/smartfactory-mes-system"
+            target="_blank"
+            class="exp-readme-btn"
+            >README 보기 →</a
+          >
+        </div>
+
+        <!-- 기타 -->
+        <div class="exp-card exp-card-animate">
+          <div class="exp-card-head">
+            <span class="exp-card-title">기타 참여 프로젝트</span>
+          </div>
+          <table class="exp-mini-table">
+            <thead>
+              <tr>
+                <th>기간</th>
+                <th>프로젝트</th>
+                <th>주요 역할</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>2025.11–12</td>
+                <td>(주)GRM WMS</td>
+                <td>
+                  외부 DB 접근 제한 환경에서 인터페이스 기반 데이터 연동 및
+                  하이브리드 앱 PDA 기능 구현
+                </td>
+              </tr>
+              <tr>
+                <td>2024.10–2025.06</td>
+                <td>(주)함일셀레나 MES</td>
+                <td>
+                  담당자 전환 후 감리 대응·임치 수행, 정부사업 종료 프로세스
+                  주도
+                </td>
+              </tr>
+              <tr>
+                <td>2025.02–06</td>
+                <td>(주)아이스푸드 MES</td>
+                <td>
+                  사용자 교육·배포·고객 대응 단독 수행, 초기 운영 안정화 달성
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="project" class="hidden">
+      <h2>Projects</h2>
+      <div class="project_container">
+        <div class="project_item" id="pet_care_platform">
+          <img src="/images/loading.gif" class="project_img active" />
+          <img src="/images/견강할고양.png" class="project_img" />
+          <div class="project_info">
+            <div class="project_title">견강할고양</div>
+            <span>팀프로젝트 5명 · 2024.07.02 – 07.17</span>
+            <p class="desc">
+              반려동물 병원 예약 플랫폼. 행정안전부 공공 API 활용, 전국 5,000+
+              동물병원 데이터 연동. 지도 찾기, 예약 관리, 문의 채팅, 미니게임
+              제공.
+            </p>
+            <div class="skill_container">
+              <span class="skills">Spring Boot</span
+              ><span class="skills">MariaDB</span><span class="skills">JPA</span
+              ><span class="skills">Spring Security</span
+              ><span class="skills">JWT</span
+              ><span class="skills">Thymeleaf</span>
+            </div>
+          </div>
+          <div class="hover-info">
+            <div class="img_container pet_care">
+              <img
+                src="/images/free-icon-file-1150592-white.png"
+                alt="상세보기"
+                class="contact_icon file_icon" />
+              <img
+                src="/images/free-icon-github-733609-white.png"
+                alt="github"
+                class="contact_icon github_white_icon" />
+            </div>
+          </div>
+        </div>
+
+        <div class="project_item" id="job_platform2">
+          <img src="/images/원픽 진짜.png" class="project_img active" />
+          <img src="/images/원픽.png" class="project_img" />
+          <div class="project_info">
+            <div class="project_title">원픽</div>
+            <span>팀프로젝트 5명 · 2024.06.11 – 06.21</span>
+            <p class="desc">
+              구인구직 플랫폼 2탄. 지원·채용 과정 관리와 Firebase 기반 실시간
+              알림 서비스, 리뷰·평점 기능 고도화.
+            </p>
+            <div class="skill_container">
+              <span class="skills">Spring Boot</span
+              ><span class="skills">Spring Security</span
+              ><span class="skills">Firebase</span
+              ><span class="skills">MariaDB</span><span class="skills">JPA</span
+              ><span class="skills">JSP</span>
+            </div>
+          </div>
+          <div class="hover-info">
+            <div class="img_container onepick">
+              <img
+                src="/images/free-icon-file-1150592-white.png"
+                alt="상세보기"
+                class="contact_icon file_icon" />
+              <img
+                src="/images/free-icon-github-733609-white.png"
+                alt="github"
+                class="contact_icon github_white_icon" />
+            </div>
+          </div>
+        </div>
+
+        <div class="project_item" id="job_platform1">
+          <img src="/images/잡왕진짜.png" class="project_img active" />
+          <img src="/images/잡왕웹.png" class="project_img" />
+          <div class="project_info">
+            <div class="project_title">잡왕</div>
+            <span>팀프로젝트 5명 · 2024.05.10 – 05.24</span>
+            <p class="desc">
+              구인구직 플랫폼 1탄. 구직자 프로필 관리, 공고 게시 및 구직자-공고
+              매칭 기능, 리뷰·평점 서비스.
+            </p>
+            <div class="skill_container">
+              <span class="skills">Spring Boot</span
+              ><span class="skills">MariaDB</span><span class="skills">JPA</span
+              ><span class="skills">Thymeleaf</span>
+            </div>
+          </div>
+          <div class="hover-info">
+            <div class="img_container">
+              <img
+                src="/images/free-icon-file-1150592-white.png"
+                alt="상세보기"
+                class="contact_icon file_icon" />
+              <img
+                src="/images/free-icon-github-733609-white.png"
+                alt="github"
+                class="contact_icon github_white_icon" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <footer>
-      <p>&copy; 2024 유지아 포트폴리오 </p>
+      <p>© 2026 유지아 · Java/Spring 백엔드 개발자</p>
       <div class="contact_container">
-        <img 
-          style="width: 30px; height: 30px;"
+        <img
           src="/images/free-icon-cv-7198116.png"
           alt="resume"
           class="contact_icon resume_icon" />
-        <img 
-          style="width: 30px; height: 30px;"
+        <img
+          src="/images/project.png"
+          alt="career"
+          class="contact_icon project_icon" />
+        <img
           src="/images/free-icon-email-3178158.png"
           alt="email"
           class="contact_icon email_icon" />
-        <img 
-          style="width: 30px; height: 30px;"
+        <img
           src="/images/free-icon-github-733609.png"
           alt="github"
           class="contact_icon github_icon" />
       </div>
     </footer>
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+
     <script src="script.js"></script>
   </body>
 </html>
