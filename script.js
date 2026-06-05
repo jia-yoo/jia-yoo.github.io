@@ -113,3 +113,20 @@ document.querySelectorAll(".project_item").forEach((item) => {
     }
   });
 });
+
+// intro 애니메이션 — 스크롤로 재진입 시 재실행
+const introAnims = document.querySelectorAll(".intro-anim");
+const introObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.style.animation = "none";
+        entry.target.offsetHeight; // reflow 강제
+        entry.target.style.animation = "";
+      }
+    });
+  },
+  { threshold: 0.3 },
+);
+
+introAnims.forEach((el) => introObserver.observe(el));

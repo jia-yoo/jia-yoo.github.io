@@ -40,7 +40,7 @@ body {
 
 /* ===== 형광펜 하이라이트 ===== */
 .hl {
-  background: linear-gradient(transparent -50%, var(--yellow-bg) -50%);
+  background: linear-gradient(transparent 25%, var(--yellow-bg) 25%);
   color: var(--text-primary);
   font-weight: 700;
   padding: 0 2px;
@@ -712,5 +712,110 @@ footer .contact_icon:hover {
   footer {
     padding: 2rem 1.5rem;
     width: auto;
+  }
+}
+
+/* ===== INTRO 애니메이션 ===== */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.intro-anim {
+  opacity: 0;
+  animation: slideInLeft 0.6s ease forwards;
+  animation-delay: var(--delay, 0s);
+}
+
+/* ===== INTRO 레이아웃 (코드블럭 추가) ===== */
+#intro {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6rem;
+  padding-right: 12rem;
+}
+
+/* ===== INTRO 코드 블럭 ===== */
+.intro-code {
+  flex: 1;
+  max-width: 650px;
+  min-width: 300px;
+}
+.intro-code-inner {
+  background: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+}
+.code-dots {
+  padding: 12px 16px 8px;
+  display: flex;
+  gap: 6px;
+  border-bottom: 1px solid var(--border);
+  background: #f9f9f6;
+}
+.code-dots span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+.code-dots span:nth-child(1) {
+  background: #ff5f57;
+}
+.code-dots span:nth-child(2) {
+  background: #febc2e;
+}
+.code-dots span:nth-child(3) {
+  background: #28c840;
+}
+.intro-code-inner pre {
+  margin: 0;
+  padding: 1.4rem 1.6rem 1.6rem;
+  font-family: "Noto Sans KR", monospace;
+  font-size: 13.5px;
+  line-height: 2;
+  overflow-x: auto;
+  background: #ffffff;
+}
+.intro-code-inner code {
+  font-family: inherit;
+}
+.c-keyword {
+  color: #7c4dbc;
+}
+.c-class {
+  color: #b06000;
+}
+.c-type {
+  color: #0070c1;
+}
+.c-str {
+  color: #b5470a;
+}
+.c-num {
+  color: #098658;
+}
+.c-fn {
+  color: #0070c1;
+}
+.c-comment {
+  color: #aaa;
+  font-style: italic;
+}
+
+@media (max-width: 900px) {
+  .intro-code {
+    display: none;
+  }
+  #intro {
+    padding-right: 1.5rem;
   }
 }
